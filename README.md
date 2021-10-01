@@ -1,4 +1,4 @@
-# MarjoryProject
+# Star Wars management rebels project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
@@ -8,6 +8,10 @@ The whole application has been designed using the mobile-first principle and is 
 The original JSON file has been slightly edited because 'recrutement' was misspelled (wrote as 'recutementDate'), which made less sense when calling variables (so the change was purely aesthetic).
 
 Enjoy !
+
+## Install
+
+Run `npm install`to install project locally.
 
 ## JSON server
 
