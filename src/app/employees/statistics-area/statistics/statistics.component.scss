@@ -1,0 +1,45 @@
+.container {
+    width: 80%; 
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    margin: 0 auto 44px auto; 
+    border-radius: 5px;
+
+    .box {
+        height: 100%;
+    }
+
+    app-card-stat {
+        h2 {
+            margin-bottom: 24px;
+            text-align: center;
+            font-family: "Oswald", sans-serif;
+        }
+
+        p {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-family: "Oswald", sans-serif;
+            font-size: 16px;
+
+            img {
+                margin: 40px auto 0 auto;
+                width: 100px;
+            }
+        }
+
+        p-chart {
+            text-align: center;
+        }
+    }
+}
+
+:host {
+    ::ng-deep .box {
+        .p-card.p-component {
+            height: calc(100% - 16px);
+        }
+    }
+}

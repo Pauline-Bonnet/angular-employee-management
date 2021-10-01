@@ -1,0 +1,36 @@
+@import './../../../assets/colors.scss';
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: $bright-green;
+    box-shadow: 0px 7px 17px 9px $bright-green;
+
+    .footer-logo-container {
+        display: flex;
+        width: 100%;
+        height: 80px;
+        margin: 0 16px 8px 16px;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width:780px) {
+            justify-content: space-between;
+        }
+
+        img {
+            height: 60px;
+            width: 60px;
+            margin: 0 16px;
+        }
+
+        h1 {
+            margin-left: 16px;
+            color: $black;
+            font-size: 18px;
+            font-family: "BlackDistantFont";
+        }
+    }
+}

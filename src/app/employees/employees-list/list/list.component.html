@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="flex-stats-container">
+        <app-statistics></app-statistics>
+    </div>
+
+    <span class="p-input-icon-right">
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText [(ngModel)]="searchText" placeholder="Recherche">         
+    </span>
+
+    <div class="list-container">
+        <div class="empty" *ngIf="empty === true">
+            <p>Aucun résultat ne correspond à votre recherche ...</p>
+            <img src="./../../../../assets/images/chibi-r2d2.png" alt="r2d2">
+        </div>
+
+        <div class="content" *ngFor="let employee of employeesList | filterPipe: searchText">
+            <app-card [employee]="employee"></app-card>
+        </div>
+    </div>
+</div>
+

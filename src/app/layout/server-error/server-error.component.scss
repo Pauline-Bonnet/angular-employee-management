@@ -1,0 +1,29 @@
+@import './../../../assets/colors.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    padding-top: 104px;
+
+    h1 {
+        color: $error-green;
+        text-align: center;
+        font-size: 3rem;
+        font-family: 'OutlineDistantFont';
+    }
+
+    img {
+        margin: 50px auto;
+        width: 100%;
+
+        @media (min-width: 750px) and (max-width: 900px) {
+            width: 60%;
+        }
+
+        @media (min-width: 900px) {
+            width: 40%;
+        }
+    }
+}

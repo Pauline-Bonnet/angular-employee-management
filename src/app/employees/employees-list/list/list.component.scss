@@ -1,0 +1,87 @@
+@import './../../../../assets/colors.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 84px;
+
+    .p-input-icon-right {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 24px auto 0 auto;
+        width: 360px;
+
+        i {
+            position: absolute;
+            top: 50%;
+            right: 2%;
+            color: #dedede;
+        }
+
+        input {
+            width: 360px;
+            padding-right: 40px;
+
+            &:hover {
+                border-color: $bright-green;
+                border-width: 1px;
+            }
+            &:focus {
+                border-color: $bright-green;
+                border-width: 1px;
+                box-shadow: 0 0 0px 0.1rem $bright-green;
+            }
+        }
+
+        @media (min-width: 900px) {
+            width: 560px;
+
+            input {
+                width: 560px;
+            }
+        }
+    }
+
+    .list-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (min-width: 900px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .empty {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            img {
+                width: 450px;
+                margin: auto;
+            }
+            p {
+                margin: 24px auto 12px auto;
+                text-align: center;
+                color: $bright-green;
+                font-family: "OutlineDistantFont";
+                font-size: 24px;               
+            }
+
+        }
+    }
+    
+    .content {
+        margin: 24px 0;
+    }
+
+    .flex-stats-container {
+        app-statistics {
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,131 @@
+@import './../../../assets/colors.scss';
+
+.container {
+    padding: 104px 0 60px 0;
+    min-height: calc(100vh - 80px);
+    
+    .card-detail {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-areas: "infos"
+                            "cpo"
+                            "back";
+        width: 90%;
+        margin: 20px auto 0 auto;
+        border-radius: 5px;
+        background-color: $light-gray;
+
+        @media (min-width: 750px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 80% 20%;
+            grid-template-areas: "infos cpo"
+                                "back cpo";
+        }
+
+        @media (min-width: 900px) {
+            flex-direction: row;
+            width: 820px;
+        }
+
+        .details {
+            padding: 24px 24px 0 24px;
+            grid-area: infos;
+            color: $light-yellow;
+
+            h1 {
+                text-align: center;
+                margin-bottom: 16px;
+            }
+
+            span {
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 0.75px;
+            }
+
+            ul {
+                list-style: none;
+                margin-left: 16px;
+            }
+        }
+
+        .cpo-container {
+            position: relative;
+            margin: auto;
+            width: 400px;
+            grid-area: cpo;
+
+            @media (min-width: 900px) {
+                width: 512px;
+                max-width: 512px;
+            }
+
+            img {
+                margin: auto;
+                width: 400px;
+    
+                @media (min-width: 900px) {
+                    width: 512px;
+                    max-width: 512px;
+                }
+                
+            }
+
+            .bubble-container {
+                position: absolute;
+                top: -65px;
+                right: -10px;
+                width: 200px;
+
+                .bubble {
+                    position: relative;
+                    height: 110px;
+                    width: 200px;
+                    padding-top: 16px;
+                    background: $ivory;
+                    display: block;
+                    margin: 0 auto;
+                    border-radius: 10px;
+                    margin-top: 50px;
+                    font-size: 14px;
+                    text-align: center;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        height: 40px;
+                        width: 40px;
+                        background: $ivory;
+                        margin: 0 auto;
+                        transform: rotate(45deg);
+                        border-radius: 0 0 5px 0;
+                        bottom: -15px;
+                        right: 15px;
+                    }
+                }
+            }
+        }
+
+        p-button {
+            margin: 20px auto;
+            width: 120px;
+            grid-area: back;
+        }
+    }
+}
+
+:host {
+    ::ng-deep button.p-ripple.p-element.p-button.p-component {
+        width: 120px;
+        background-color: $dark-yellow !important;
+        box-shadow: 0px 0px 17px 4px $dark-yellow !important;
+        border: none !important;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        &:focus, &:hover {
+            box-shadow: 0px 0px 17px 9px $dark-yellow !important;
+        }
+    }
+} 

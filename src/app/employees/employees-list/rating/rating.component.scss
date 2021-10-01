@@ -1,0 +1,22 @@
+@import './../../../../assets/colors.scss';
+
+:host {
+    ::ng-deep p-rating .p-rating-icon {
+        color: $bright-green;
+
+        &.pi.pi-star {
+            color: $bright-green;
+        }
+
+        &:focus {
+            box-shadow: none !important;
+        }
+        &:hover {
+            color: $bright-green !important;
+        }
+    }
+}
+
+.container {
+    margin: 26px auto 0 auto;
+}

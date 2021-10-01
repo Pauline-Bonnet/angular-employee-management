@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/colors.scss';
+@import './assets/fonts.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+    background-color: $black;
+}

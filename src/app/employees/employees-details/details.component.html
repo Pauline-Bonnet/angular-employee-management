@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="card-detail" *ngIf="employee">
+        <div class="details">
+            <h1>{{ employee.name }}</h1>
+            <p><span>Contact : </span>{{ employee.email }}</p>
+            <p><span>Position : </span>{{ employee.position }}</p>
+            <p><span>Equipe d'intervention : </span>{{ employee.team }}</p>
+            <p><span>Recrutement : </span>{{ recrutement | date:'dd/MM/yyyy' }}</p>
+            <div class="project-container">
+                <p><span>Projets : </span></p>
+                <ul *ngFor="let projectName of employeeProjectsName">
+                    <li>{{ projectName }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="cpo-container">
+            <img src="./../../../../assets/images/chibi-c3po.png" alt="C3PO" class="c3po">
+            <div class="bubble-container">
+                <div class="bubble">Enchanté, C-3PO. Relations humains/cyborgs. Laissez-moi vous présenter ce rebelle !</div>
+            </div>
+        </div>
+        <p-button label="Retour" (click)="goBack()"></p-button>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="grid">
+        <div class="col">
+            <div class="box first">
+                <app-card-stat class="first">
+                    <h2 header>Nombre d'employés</h2>
+                    <p body>{{employeesNumber}}
+                        <img src="./../../../../assets/images/logo-alliance-vert.png">
+                    </p>
+                </app-card-stat>
+            </div>
+        </div>
+        <div class="col">
+            <div class="box">
+                <app-card-stat>
+                    <h2 header>Nombre d'hommes</h2>
+                    <p-chart body type="doughnut" [data]="dataMen" width="200px" style="margin: auto;"></p-chart>
+                </app-card-stat>
+            </div>
+        </div>
+        <div class="col">
+            <div class="box">
+                <app-card-stat>
+                    <h2 header>Nombre de femmes</h2>
+                    <p-chart body type="doughnut" [data]="dataWomen" width="200px" style="margin: auto;"></p-chart>
+                </app-card-stat>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="col">
+            <div class="box">
+                <app-card-stat>
+                    <h2 header>Nombre d'équipes</h2>
+                    <p body>{{teams}}</p>
+                </app-card-stat>
+            </div>
+        </div>
+        <div class="col">
+            <div class="box">
+                <app-card-stat>
+                    <h2 header>Meilleur rebelle</h2>
+                    <p body>{{bestEmployee}}</p>
+                </app-card-stat>
+            </div>
+        </div>
+        <div class="col">
+            <div class="box">
+                <app-card-stat>
+                    <h2 header>Dernière recrue</h2>
+                    <p body>{{newbe}}</p>
+                </app-card-stat>
+            </div>
+        </div>
+    </div>
+</div>

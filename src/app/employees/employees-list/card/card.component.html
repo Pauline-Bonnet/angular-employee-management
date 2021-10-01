@@ -1,0 +1,18 @@
+<ng-container>
+    <div class="card-container">
+        <p-card [header]="employee.name" [subheader]="employee.position" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <p-header>
+                <img *ngIf="employee.sex === 'female'" alt="Card" src="./../../../../assets/images/chibi-leia.png">
+                <img *ngIf="employee.sex === 'male'" alt="Card" src="./../../../../assets/images/chibi-luke.png">
+            </p-header>
+            <p class="sex"><span>Sexe : </span><img *ngIf="employee.sex === 'female'" src="./../../../../assets/images/female_white_24dp.svg"/>
+                      <img *ngIf="employee.sex === 'male'" src="./../../../../assets/images/male_white_24dp.svg"/>
+            </p>
+            <p><span>Contact : </span>{{ employee.email }}</p>
+            <p><span>Âge : </span>{{ employee.birthDate | getAge }} ans</p>
+            <p><span>Recrutement dans l'alliance : </span>{{ recrutement | date:'dd/MM/yyyy' }}</p>
+            <app-rating [score]="employee.score"></app-rating>
+            <p-button label="Fiche descriptive du rebelle" (click)="seeDetails(employee)"></p-button>
+        </p-card>
+    </div>
+</ng-container>

@@ -1,0 +1,72 @@
+@import './../../../../assets/colors.scss';
+
+.card-container {
+    display: flex;
+    justify-content: center;
+
+    p-card {
+        margin: 4px auto;
+
+        @media (min-width: 900px) {
+            margin: 4px;
+        }
+
+        img {
+            box-shadow: 0px 10px 17px -16px $bright-green;
+        }
+
+        .sex {
+            display: flex;
+        }
+
+        span {
+            text-transform: uppercase;
+            letter-spacing: 0.75px;
+            font-weight: bold;
+        }
+
+        p:last-of-type {
+            margin-bottom: 4px;
+        }
+
+        p-button {
+            margin: 34px auto 6px auto;
+            &:focus {
+                box-shadow: none !important;
+            }
+            &:hover {
+                color: $bright-green !important;
+            }
+        }
+    }
+}
+
+:host {
+    ::ng-deep .p-card-title {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+    }
+
+    ::ng-deep .p-card-content {
+        display: flex !important;
+        flex-direction: column !important;
+        font-family: 'Oswald', sans-serif;
+
+        .p-button {
+            background-color: $bright-pink !important;
+            box-shadow: 0px 0px 17px 4px $bright-pink !important;
+            border: none !important;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+    
+            &:focus, &:hover {
+                box-shadow: 0px 0px 17px 9px $bright-pink !important;
+            }
+
+            .p-button-label {
+                color: $white;
+            }
+        }
+    }
+} 

@@ -1,0 +1,11 @@
+// main font with colored outline and transparent internal color
+@font-face {
+    font-family: "OutlineDistantFont";
+    src: url('./fonts/SfDistantGalaxyAltoutline-e2Bp.ttf') format('truetype');
+}
+
+// secondary font, dark, used in footer
+@font-face {
+    font-family: "BlackDistantFont";
+    src: url('./fonts/SfDistantGalaxy-0l3d.ttf') format('truetype');
+}
